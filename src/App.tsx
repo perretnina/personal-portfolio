@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InteractiveTerminal from "./components/InteractiveTerminal";
+import MyJourney from "./components/MyJourney";
 import "./App.css";
 
 const navigation = [
@@ -35,11 +36,13 @@ function App() {
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navigation.map((item) =>
-            item === "Home" ? (
+            item === "Home" || item === "My Journey" ? (
               <a
                 key={item}
-                href="#home"
-                className="nav-link active"
+                href={item === "Home" ? "#home" : "#my-journey"}
+                className={`nav-link ${
+                  item === "Home" ? "active" : ""
+                }`}
                 onClick={() => setMenuOpen(false)}
               >
                 {item}
@@ -58,6 +61,8 @@ function App() {
       </header>
 
       <main>
+        {/* HOME */}
+
         <section id="home" className="hero">
           <div className="hero-background" aria-hidden="true" />
 
@@ -116,6 +121,10 @@ function App() {
             <div className="scroll-line" />
           </div>
         </section>
+
+        {/* MY JOURNEY */}
+
+        <MyJourney />
 
         {/* Les prochaines sections seront ajoutées progressivement. */}
       </main>
