@@ -1,4 +1,5 @@
 import { useState } from "react";
+import InteractiveTerminal from "./components/InteractiveTerminal";
 import "./App.css";
 
 const navigation = [
@@ -105,27 +106,8 @@ function App() {
               </div>
             </div>
 
-            <div className="hero-visual" aria-hidden="true">
-              <div className="visual-glow visual-glow-pink" />
-              <div className="visual-glow visual-glow-cyan" />
-
-              <div className="orbit orbit-one" />
-              <div className="orbit orbit-two" />
-              <div className="orbit orbit-three" />
-
-              <div className="core">
-                <div className="core-inner">
-                  <span className="core-symbol">N.</span>
-                </div>
-              </div>
-
-              <div className="floating-label label-ai">AI / ML</div>
-              <div className="floating-label label-data">DATA</div>
-              <div className="floating-label label-code">01 / 00</div>
-
-              <div className="visual-node node-one" />
-              <div className="visual-node node-two" />
-              <div className="visual-node node-three" />
+            <div className="hero-visual">
+              <InteractiveTerminal />
             </div>
           </div>
 
@@ -135,7 +117,7 @@ function App() {
           </div>
         </section>
 
-        {/* Les prochaines sections seront ajoutées après validation du rendu Home. */}
+        {/* Les prochaines sections seront ajoutées progressivement. */}
       </main>
     </div>
   );
