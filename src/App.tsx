@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InteractiveTerminal from "./components/InteractiveTerminal";
 import MyJourney from "./components/MyJourney";
+import Experience from "./components/Experience";
 import "./App.css";
 
 const navigation = [
@@ -36,10 +37,18 @@ function App() {
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navigation.map((item) =>
-            item === "Home" || item === "My Journey" ? (
+            item === "Home" ||
+            item === "My Journey" ||
+            item === "Experience" ? (
               <a
                 key={item}
-                href={item === "Home" ? "#home" : "#my-journey"}
+                href={
+                  item === "Home"
+                    ? "#home"
+                    : item === "My Journey"
+                    ? "#my-journey"
+                    : "#experience"
+                }
                 className={`nav-link ${
                   item === "Home" ? "active" : ""
                 }`}
@@ -125,6 +134,10 @@ function App() {
         {/* MY JOURNEY */}
 
         <MyJourney />
+
+        {/* EXPERIENCE */}
+
+        <Experience />
 
         {/* Les prochaines sections seront ajoutées progressivement. */}
       </main>

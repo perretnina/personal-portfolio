@@ -1,0 +1,379 @@
+.experience-section {
+  position: relative;
+  padding: 110px 7% 130px;
+  background: #0b0b14;
+  color: #f8f8fc;
+}
+
+.experience-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.experience-heading {
+  max-width: 760px;
+  margin-bottom: 75px;
+}
+
+.experience-eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #22d3ee;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+}
+
+.experience-heading h2 {
+  margin: 0 0 22px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.experience-heading h2 span {
+  color: #f43f93;
+}
+
+.experience-heading > p {
+  color: #a9a9bb;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.experience-timeline {
+  position: relative;
+  padding-left: 95px;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  bottom: 70px;
+  left: 28px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #22d3ee 0%,
+    #f43f93 50%,
+    #22d3ee 100%
+  );
+  opacity: 0.7;
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-timeline-marker {
+  position: absolute;
+  left: -95px;
+  top: 29px;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #22d3ee;
+  border-radius: 50%;
+  background: #0b0b14;
+  color: #22d3ee;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.12);
+}
+
+.experience-item-pink .experience-timeline-marker {
+  border-color: #f43f93;
+  color: #f43f93;
+  box-shadow: 0 0 20px rgba(244, 63, 147, 0.12);
+}
+
+.experience-card {
+  background: #151525;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.experience-card:hover {
+  border-color: rgba(34, 211, 238, 0.38);
+  transform: translateY(-2px);
+}
+
+.experience-item-pink .experience-card:hover {
+  border-color: rgba(244, 63, 147, 0.38);
+}
+
+.experience-item-expanded .experience-card {
+  border-color: rgba(34, 211, 238, 0.35);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.18);
+}
+
+.experience-item-expanded.experience-item-pink .experience-card {
+  border-color: rgba(244, 63, 147, 0.35);
+}
+
+.experience-card-trigger {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 34px 15px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.experience-card-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.experience-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-bottom: 22px;
+}
+
+.experience-category {
+  display: inline-block;
+  padding: 7px 11px;
+  border-radius: 5px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+}
+
+.experience-category-cyan {
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.experience-category-pink {
+  background: rgba(244, 63, 147, 0.1);
+  color: #f43f93;
+  border: 1px solid rgba(244, 63, 147, 0.2);
+}
+
+.experience-date {
+  color: #a9a9bb;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+}
+
+.experience-organization {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.5rem, 2.7vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.experience-role {
+  margin-top: 9px;
+  color: #22d3ee;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.experience-item-pink .experience-role {
+  color: #f43f93;
+}
+
+.experience-location {
+  margin-top: 7px;
+  color: #85859a;
+  font-size: 0.87rem;
+}
+
+.experience-summary {
+  margin-top: 22px;
+  color: #b9b9c9;
+  line-height: 1.75;
+  font-size: 0.96rem;
+}
+
+.experience-toggle {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  border-radius: 50%;
+  color: #22d3ee;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.experience-item-pink .experience-toggle {
+  border-color: rgba(244, 63, 147, 0.4);
+  color: #f43f93;
+}
+
+.experience-card-trigger:hover .experience-toggle {
+  background: rgba(34, 211, 238, 0.1);
+}
+
+.experience-item-pink
+  .experience-card-trigger:hover
+  .experience-toggle {
+  background: rgba(244, 63, 147, 0.1);
+}
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 5px 34px 30px;
+}
+
+.experience-skill {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #b9b9c9;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+}
+
+.experience-expanded-content {
+  padding: 0 34px 35px;
+  animation: experience-reveal 0.35s ease both;
+}
+
+.experience-details {
+  display: grid;
+  gap: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-detail-section h4 {
+  margin: 0 0 14px;
+  color: #f8f8fc;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+}
+
+.experience-detail-section h4::before {
+  content: "// ";
+  color: #22d3ee;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.experience-item-pink .experience-detail-section h4::before {
+  color: #f43f93;
+}
+
+.experience-detail-section p {
+  margin: 0 0 12px;
+  color: #b9b9c9;
+  font-size: 0.93rem;
+  line-height: 1.85;
+}
+
+.experience-detail-section p:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes experience-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 80px 6% 100px;
+  }
+
+  .experience-heading {
+    margin-bottom: 50px;
+  }
+
+  .experience-timeline {
+    padding-left: 47px;
+  }
+
+  .experience-timeline::before {
+    left: 15px;
+  }
+
+  .experience-timeline-marker {
+    left: -47px;
+    top: 25px;
+    width: 32px;
+    height: 32px;
+    font-size: 0.65rem;
+  }
+
+  .experience-card-trigger {
+    padding: 24px 20px 12px;
+    gap: 12px;
+  }
+
+  .experience-card-meta {
+    margin-bottom: 16px;
+  }
+
+  .experience-toggle {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .experience-skills {
+    padding: 5px 20px 24px;
+  }
+
+  .experience-expanded-content {
+    padding: 0 20px 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .experience-toggle {
+    transition: none;
+  }
+
+  .experience-expanded-content {
+    animation: none;
+  }
+}
