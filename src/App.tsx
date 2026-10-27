@@ -2,6 +2,8 @@ import { useState } from "react";
 import InteractiveTerminal from "./components/InteractiveTerminal";
 import MyJourney from "./components/MyJourney";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 import "./App.css";
 
 const navigation = [
@@ -34,12 +36,9 @@ function App() {
           <span />
           <span />
         </button>
-
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navigation.map((item) =>
-            item === "Home" ||
-            item === "My Journey" ||
-            item === "Experience" ? (
+            ["Home", "My Journey", "Experience", "Projects", "Skills"].includes(item) ? (
               <a
                 key={item}
                 href={
@@ -47,11 +46,13 @@ function App() {
                     ? "#home"
                     : item === "My Journey"
                     ? "#my-journey"
-                    : "#experience"
+                    : item === "Experience"
+                    ? "#experience"
+                    : item === "Projects"
+                    ? "#projects"
+                    : "#skills"
                 }
-                className={`nav-link ${
-                  item === "Home" ? "active" : ""
-                }`}
+                className={`nav-link ${item === "Home" ? "active" : ""}`}
                 onClick={() => setMenuOpen(false)}
               >
                 {item}
@@ -139,7 +140,14 @@ function App() {
 
         <Experience />
 
-        {/* Les prochaines sections seront ajoutées progressivement. */}
+        {/* PROJECTS */}
+
+        <Projects />
+
+        {/* SKILLS */}
+
+        <Skills />
+
       </main>
     </div>
   );

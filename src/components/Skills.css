@@ -1,0 +1,346 @@
+.skills-section {
+  padding: 110px 6% 130px;
+  background: #0b0b14;
+  color: #f5f5fa;
+  scroll-margin-top: 80px;
+}
+
+.skills-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.skills-header {
+  margin-bottom: 68px;
+}
+
+.skills-eyebrow,
+.skills-block-index,
+.skills-card-number,
+.skills-language-code {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.12em;
+}
+
+.skills-eyebrow {
+  font-size: 12px;
+  color: #22d3ee;
+}
+
+.skills-header h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+  margin: 18px 0;
+}
+
+.skills-header h2 span {
+  color: #f43f93;
+}
+
+.skills-header p {
+  max-width: 650px;
+  color: #a9a9bb;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* SECTION HEADINGS */
+
+.skills-block + .skills-block {
+  margin-top: 76px;
+}
+
+.skills-block-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.skills-block-index {
+  color: #22d3ee;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.skills-block-heading h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(23px, 3vw, 32px);
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+.skills-block-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, #39394d, transparent);
+}
+
+/* TECHNICAL SKILLS */
+
+.skills-technical-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.skills-technical-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 268px;
+  padding: 28px;
+  background: #151525;
+  border: 1px solid #29293e;
+  border-radius: 16px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.skills-technical-card:hover {
+  transform: translateY(-4px);
+  border-color: #f43f93;
+  box-shadow: 0 16px 35px #0003;
+}
+
+.skills-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.skills-card-number {
+  font-size: 12px;
+  color: #22d3ee;
+}
+
+/* Hide decorative arrow on technical skill cards */
+.skills-card-symbol {
+  display: none;
+}
+
+.skills-technical-card h4 {
+  margin: 0 0 10px;
+  font: 600 25px/1.2 "Space Grotesk", sans-serif;
+  letter-spacing: -0.035em;
+}
+
+.skills-technical-card p {
+  margin: 0 0 18px;
+  color: #a9a9bb;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* SKILL BADGES */
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0;
+}
+
+.skills-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #35354a;
+  background: #1d1d30;
+  color: #d1d1df;
+  border-radius: 6px;
+  padding: 8px 11px;
+  font: 12px "IBM Plex Mono", monospace;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.skills-technical-card:hover .skills-tag {
+  border-color: #48415d;
+}
+
+/* SOFT SKILLS */
+
+.skills-soft-panel {
+  padding: 30px;
+  border: 1px solid #29293e;
+  border-radius: 16px;
+  background: #151525;
+}
+
+.skills-soft-panel > p {
+  margin: 0 0 25px;
+  color: #a9a9bb;
+  font-size: 14px;
+}
+
+.skills-soft-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-soft-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #3b344c;
+  border-radius: 999px;
+  padding: 12px 17px;
+  background: #221a30;
+  color: #f5eaf1;
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    transform 0.2s;
+}
+
+.skills-soft-item:hover {
+  border-color: #f43f93;
+  background: #30203c;
+  transform: translateY(-3px);
+}
+
+.skills-soft-star {
+  color: #f43f93;
+  font-size: 17px;
+}
+
+/* LANGUAGES */
+
+.skills-languages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skills-language-card {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px 18px;
+  border: 1px solid #29293e;
+  border-radius: 14px;
+  background: #151525;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.skills-language-card:hover {
+  border-color: #22d3ee;
+  transform: translateY(-3px);
+}
+
+.skills-language-code {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: #142c36;
+  color: #22d3ee;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.skills-language-detail {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skills-language-name {
+  font: 600 16px "Space Grotesk", sans-serif;
+}
+
+.skills-language-level {
+  font: 12px "IBM Plex Mono", monospace;
+  color: #aaaabd;
+}
+
+/* Hide decorative arrow on language cards */
+.skills-language-arrow {
+  display: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .skills-languages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-section {
+    padding: 80px 5% 95px;
+  }
+
+  .skills-header {
+    margin-bottom: 48px;
+  }
+
+  .skills-block + .skills-block {
+    margin-top: 56px;
+  }
+
+  .skills-technical-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-technical-card {
+    min-height: 235px;
+    padding: 24px;
+  }
+
+  .skills-soft-panel {
+    padding: 23px;
+  }
+}
+
+@media (max-width: 450px) {
+  .skills-languages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-block-heading {
+    gap: 10px;
+  }
+
+  .skills-block-heading h3 {
+    font-size: 23px;
+  }
+
+  .skills-soft-item {
+    font-size: 13px;
+    padding: 10px 13px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-technical-card,
+  .skills-language-card,
+  .skills-tag,
+  .skills-soft-item {
+    transition: none;
+  }
+
+  .skills-technical-card:hover,
+  .skills-language-card:hover,
+  .skills-soft-item:hover {
+    transform: none;
+  }
+}
