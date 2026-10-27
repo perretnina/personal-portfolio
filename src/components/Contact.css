@@ -180,3 +180,34 @@
     transform: none;
   }
 }
+
+/* CONTACT AVATAR */
+
+.contact-avatar-wrapper {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 32px;
+  flex-shrink: 0;
+}
+
+.contact-avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+
+  border: 2px solid var(--pink);
+
+  box-shadow: 0 0 30px rgba(244, 63, 147, 0.15);
+}
+
+@media (max-width: 700px) {
+  .contact-avatar-wrapper {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 25px;
+  }
+}

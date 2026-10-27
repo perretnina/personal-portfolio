@@ -44,7 +44,7 @@ const projects: Project[] = [
     title: "Supermarket Evacuation Simulation", category: "Simulation & Research",
     description: "An agent-based simulation exploring how emergency exit configurations, crowd congestion, and fire propagation affect supermarket evacuation efficiency.",
     technologies: ["AnyLogic", "Java", "Agent-Based Modeling", "Simulation"],
-    github: "https://github.com/perretnina/anylogic-supermarket-evacuation",
+    github: "https://github.com/perretnina/supermarket-evacuation-simulation",
     sections: [
       { heading: "The Challenge", paragraphs: ["We investigated how the placement, number, and width of emergency exits influence evacuation efficiency in a supermarket during a fire."] },
       { heading: "What I Built", paragraphs: ["We created an agent-based simulation in AnyLogic, modeling individual movement, reaction times, fire and smoke propagation, and congestion around exits.", "We compared three exit configurations and measured evacuation times, exposure to danger, and crowd distribution.", "We also introduced a hysteresis rule to prevent pedestrians from repeatedly switching between exits when congestion changed."] },
@@ -152,7 +152,7 @@ export default function Projects() {
     <section id="projects" className="projects-section">
       <div className="projects-container">
         <div className="projects-heading">
-          <span className="projects-eyebrow">SELECTED WORK / 01—10</span>
+          <span className="projects-eyebrow">03 /</span>
           <h2>My <span>Projects.</span></h2>
           <p>A selection of projects spanning AI, software engineering, embedded systems, and research.</p>
         </div>

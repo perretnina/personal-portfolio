@@ -9,6 +9,14 @@ export default function Contact() {
         aria-labelledby="contact-title"
       >
         <div className="contact-container">
+          <div className="contact-avatar-wrapper">
+            <img
+              src="/avatar.png"
+              alt="Illustrated portrait of Nina Perret"
+              className="contact-avatar"
+            />
+          </div>
+
           <h2 id="contact-title">
             Let's <span>Connect.</span>
           </h2>

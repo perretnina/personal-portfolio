@@ -47,7 +47,7 @@ export default function Skills() {
     <section id="skills" className="skills-section" aria-labelledby="skills-title">
       <div className="skills-container">
         <header className="skills-header">
-          <span className="skills-eyebrow">WHAT I BRING TO THE TABLE</span>
+          <span className="skills-eyebrow">04 /</span>
           <h2 id="skills-title">My <span>Skills.</span></h2>
           <p>A combination of technical expertise, collaborative thinking, and an international mindset.</p>
         </header>

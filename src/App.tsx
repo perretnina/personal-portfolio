@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InteractiveTerminal from "./components/InteractiveTerminal";
 import MyJourney from "./components/MyJourney";
 import Experience from "./components/Experience";
@@ -8,16 +8,57 @@ import Contact from "./components/Contact";
 import "./App.css";
 
 const navigation = [
-  "Home",
-  "My Journey",
-  "Experience",
-  "Projects",
-  "Skills",
-  "Contact",
+  { label: "Home", id: "home" },
+  { label: "My Journey", id: "my-journey" },
+  { label: "Experience", id: "experience" },
+  { label: "Projects", id: "projects" },
+  { label: "Skills", id: "skills" },
+  { label: "Contact", id: "contact" },
 ];
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + 150;
+
+      let currentSection = "home";
+
+      for (const item of navigation) {
+        const section = document.getElementById(item.id);
+
+        if (section && section.getBoundingClientRect().top <= 150) {
+          currentSection = item.id;
+        }
+      }
+
+      // Ensure the last section becomes active at the bottom of the page
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 10;
+
+      if (atBottom) {
+        currentSection = "contact";
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", updateActiveSection, {
+      passive: true,
+    });
+
+    window.addEventListener("resize", updateActiveSection);
+
+    updateActiveSection();
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
 
   return (
     <div className="portfolio">
@@ -37,39 +78,23 @@ function App() {
           <span />
           <span />
         </button>
+
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          {navigation.map((item) =>
-            ["Home", "My Journey", "Experience", "Projects", "Skills", "Contact"].includes(item) ? (
-              <a
-                key={item}
-                href={
-                  item === "Home"
-                    ? "#home"
-                    : item === "My Journey"
-                    ? "#my-journey"
-                    : item === "Experience"
-                    ? "#experience"
-                    : item === "Projects"
-                    ? "#projects"
-                    : item === "Skills"
-                    ? "#skills"
-                    : "#contact"
-                }
-                className={`nav-link ${item === "Home" ? "active" : ""}`}
-                onClick={() => setMenuOpen(false)}
-              >
-                {item}
-              </a>
-            ) : (
-              <span
-                key={item}
-                className="nav-link nav-upcoming"
-                title="Section coming soon"
-              >
-                {item}
-              </span>
-            )
-          )}
+          {navigation.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className={`nav-link ${
+                activeSection === item.id ? "active" : ""
+              }`}
+              aria-current={
+                activeSection === item.id ? "location" : undefined
+              }
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
       </header>
 
@@ -101,10 +126,15 @@ function App() {
               </p>
 
               <p className="hero-description">
-                Driven by curiosity and a passion for problem-solving, I'm
-                seeking a 6-month international graduation internship starting
-                April 2027, with a particular interest in Artificial
-                Intelligence.
+                Driven by curiosity and a passion for problem-solving, I'm{" "}
+                <span style={{ color: "var(--pink)" }}>
+                  seeking a 6-month international graduation internship
+                </span >{" "}
+                starting April 2027, with a particular interest in{" "}
+                <span style={{ color: "var(--pink)" }}>
+                  Artificial Intelligence
+                </span>
+                .
               </p>
 
               <div className="hero-actions">
@@ -154,7 +184,6 @@ function App() {
         {/* CONTACT */}
 
         <Contact />
-
       </main>
     </div>
   );

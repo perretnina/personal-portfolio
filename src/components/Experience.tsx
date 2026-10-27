@@ -131,7 +131,7 @@ export default function Experience() {
     <section id="experience" className="experience-section">
       <div className="experience-container">
         <header className="experience-heading">
-          <span className="experience-eyebrow">02 / EXPERIENCE</span>
+          <span className="experience-eyebrow">02 /</span>
 
           <h2>
             My <span>Experience.</span>
@@ -179,7 +179,7 @@ export default function Experience() {
                         >
                           {extracurricular
                             ? "BEYOND THE CLASSROOM"
-                            : "PROFESSIONAL EXPERIENCE"}
+                            : "INTERNSHIP"}
                         </span>
 
                         <span className="experience-date">
