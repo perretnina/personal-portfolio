@@ -139,7 +139,7 @@ export default function FranceMap({ activeStep, onSelectStep }: FranceMapProps) 
   return (
     <div className="journey-map">
       <div className="journey-map-topline">
-        <span>SO FAR</span>
+        <span>MY JOURNEY SO FAR</span>
         <span>FRANCE → ?</span>
       </div>
 
