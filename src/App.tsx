@@ -4,6 +4,7 @@ import MyJourney from "./components/MyJourney";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 import "./App.css";
 
 const navigation = [
@@ -38,7 +39,7 @@ function App() {
         </button>
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navigation.map((item) =>
-            ["Home", "My Journey", "Experience", "Projects", "Skills"].includes(item) ? (
+            ["Home", "My Journey", "Experience", "Projects", "Skills", "Contact"].includes(item) ? (
               <a
                 key={item}
                 href={
@@ -50,7 +51,9 @@ function App() {
                     ? "#experience"
                     : item === "Projects"
                     ? "#projects"
-                    : "#skills"
+                    : item === "Skills"
+                    ? "#skills"
+                    : "#contact"
                 }
                 className={`nav-link ${item === "Home" ? "active" : ""}`}
                 onClick={() => setMenuOpen(false)}
@@ -147,6 +150,10 @@ function App() {
         {/* SKILLS */}
 
         <Skills />
+
+        {/* CONTACT */}
+
+        <Contact />
 
       </main>
     </div>
