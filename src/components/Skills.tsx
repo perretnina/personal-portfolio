@@ -82,7 +82,7 @@ export default function Skills() {
             <span className="skills-block-rule" aria-hidden="true" />
           </div>
           <div className="skills-soft-panel">
-            <p>How I approach challenges and work with others.</p>
+            <p>The qualities that shape how I learn, think, and solve problems.</p>
             <div className="skills-soft-list">
               {softSkills.map((skill, index) => (
                 <span className="skills-soft-item" key={skill}>

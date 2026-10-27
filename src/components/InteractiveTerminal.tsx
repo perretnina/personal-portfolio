@@ -172,32 +172,6 @@ export default function InteractiveTerminal() {
             <line x1="540" y1="390" x2="450" y2="500" />
           </g>
 
-          <g className="network-pulses">
-            <circle r="4">
-              <animateMotion
-                dur="5s"
-                repeatCount="indefinite"
-                path="M80 110 L210 65 L350 125 L430 280 L540 390"
-              />
-            </circle>
-
-            <circle r="3">
-              <animateMotion
-                dur="7s"
-                repeatCount="indefinite"
-                path="M90 400 L180 250 L300 360 L450 500"
-              />
-            </circle>
-
-            <circle r="3">
-              <animateMotion
-                dur="6s"
-                repeatCount="indefinite"
-                path="M510 80 L350 125 L180 250 L90 400"
-              />
-            </circle>
-          </g>
-
           <g className="network-nodes">
             {[
               [80, 110],

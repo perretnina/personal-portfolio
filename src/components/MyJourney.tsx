@@ -70,7 +70,7 @@ const chapters = [
 
 export default function MyJourney() {
   const [activeStep, setActiveStep] = useState(0);
-  const [expandedStep, setExpandedStep] = useState<number | null>(0);
+  const [expandedStep, setExpandedStep] = useState<number | null>(null);
 
   function selectStep(index: number) {
     if (index >= 0 && index < chapters.length) {
@@ -191,8 +191,12 @@ export default function MyJourney() {
 
             <button
               type="button"
-              onClick={() => selectStep(activeStep + 1)}
-              disabled={activeStep === chapters.length - 1}
+              onClick={() =>
+                selectStep(expandedStep === null ? activeStep : activeStep + 1)
+              }
+              disabled={
+                expandedStep !== null && activeStep === chapters.length - 1
+              }
             >
               Next <span aria-hidden="true">→</span>
             </button>

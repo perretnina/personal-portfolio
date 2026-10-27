@@ -43,19 +43,11 @@
   opacity: 0.75;
 
   filter: drop-shadow(0 0 6px #22d3ee);
-
-  animation: node-pulse 4s ease-in-out infinite;
 }
 
 .network-nodes circle:nth-child(3n) {
   fill: #f43f93;
   filter: drop-shadow(0 0 6px #f43f93);
-  animation-delay: -1.5s;
-}
-
-.network-pulses circle {
-  fill: #f43f93;
-  filter: drop-shadow(0 0 8px #f43f93);
 }
 
 /* TERMINAL WINDOW */
@@ -286,16 +278,6 @@
 @keyframes cursor-blink {
   50% {
     opacity: 0;
-  }
-}
-
-@keyframes node-pulse {
-  0%, 100% {
-    opacity: 0.4;
-  }
-
-  50% {
-    opacity: 1;
   }
 }
 
