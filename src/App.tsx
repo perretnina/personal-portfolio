@@ -27,7 +27,6 @@ function App() {
   function scrollToSection(id: string) {
     setMenuOpen(false);
 
-    // Home always returns to the very top of the page.
     if (id === "home") {
       window.scrollTo({
         top: 0,
@@ -46,7 +45,6 @@ function App() {
     const navbarHeight =
       navbar?.getBoundingClientRect().height ?? 0;
 
-    // Position the section below the navbar.
     const targetPosition =
       section.getBoundingClientRect().top +
       window.scrollY -
@@ -86,7 +84,6 @@ function App() {
         }
       }
 
-      // Ensure Contact becomes active at the bottom.
       const atBottom =
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 10;
@@ -126,17 +123,29 @@ function App() {
       ===================================== */}
 
       <header className="navbar">
-        <a
-          href="#home"
-          className="logo"
-          aria-label="Nina — Home"
-          onClick={(event) => {
-            event.preventDefault();
-            scrollToSection("home");
-          }}
-        >
-          NINA<span>.</span>
-        </a>
+        <div className="navbar-brand">
+          <a
+            href="#home"
+            className="logo"
+            aria-label="Nina — Home"
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToSection("home");
+            }}
+          >
+            NINA<span>.</span>
+          </a>
+
+          <span
+            className="navbar-divider"
+            aria-hidden="true"
+          />
+
+          <span className="navbar-specialties">
+            Computer Science <span>·</span> Data{" "}
+            <span>·</span> AI
+          </span>
+        </div>
 
         <button
           className="menu-toggle"
@@ -204,31 +213,34 @@ function App() {
                 </span>
               </h1>
 
-              <div className="hero-subtitle">
-                Computer Science <span>·</span> Data{" "}
-                <span>·</span> AI
+              {/* INTRODUCTION */}
+
+              <div className="hero-introduction">
+                <p className="hero-description">
+                  Final-year engineering student at Mines
+                  Saint-Étienne, with hands-on experience in
+                  AI development and data engineering.
+                </p>
+
+                {/* INTERNSHIP OPPORTUNITY */}
+
+                <div className="hero-opportunity">
+                  <span className="hero-opportunity-label">
+                    <span className="hero-opportunity-dot" />
+                    SEEKING
+                  </span>
+
+                  <p className="hero-opportunity-title">
+                    6-month international AI internship
+                  </p>
+
+                  <span className="hero-opportunity-date">
+                    Starting April 2027
+                  </span>
+                </div>
               </div>
 
-              <p className="hero-description">
-                Final-year engineering student at Mines
-                Saint-Étienne, with hands-on experience in AI
-                development and data engineering.
-              </p>
-
-              <p className="hero-description">
-                Driven by curiosity and a passion for
-                problem-solving, I'm{" "}
-                <span style={{ color: "var(--pink)" }}>
-                  seeking a 6-month international graduation
-                  internship
-                </span>{" "}
-                starting April 2027, with a particular
-                interest in{" "}
-                <span style={{ color: "var(--pink)" }}>
-                  Artificial Intelligence
-                </span>
-                .
-              </p>
+              {/* ACTIONS */}
 
               <div className="hero-actions">
                 <a
