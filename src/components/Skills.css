@@ -98,13 +98,11 @@
   border-radius: 16px;
   transition:
     transform 0.25s ease,
-    border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
 
 .skills-technical-card:hover {
   transform: translateY(-4px);
-  border-color: #f43f93;
   box-shadow: 0 16px 35px #0003;
 }
 
@@ -121,6 +119,7 @@
 }
 
 /* Hide decorative arrow on technical skill cards */
+
 .skills-card-symbol {
   display: none;
 }
@@ -150,20 +149,18 @@
 .skills-tag {
   display: inline-flex;
   align-items: center;
-  border: 1px solid #35354a;
-  background: #1d1d30;
-  color: #d1d1df;
+
+  border: 1px solid #3b344c;
+  background: #221a30;
+  color: #f5eaf1;
+
   border-radius: 6px;
   padding: 8px 11px;
+
   font: 12px "IBM Plex Mono", monospace;
-  transition:
-    color 0.2s,
-    border-color 0.2s;
 }
 
-.skills-technical-card:hover .skills-tag {
-  border-color: #48415d;
-}
+/* No hover effect on individual skill badges */
 
 /* SOFT SKILLS */
 
@@ -198,13 +195,11 @@
   font-size: 14px;
   font-weight: 500;
   transition:
-    border-color 0.2s,
     background 0.2s,
     transform 0.2s;
 }
 
 .skills-soft-item:hover {
-  border-color: #f43f93;
   background: #30203c;
   transform: translateY(-3px);
 }
@@ -231,13 +226,10 @@
   border: 1px solid #29293e;
   border-radius: 14px;
   background: #151525;
-  transition:
-    border-color 0.2s,
-    transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .skills-language-card:hover {
-  border-color: #22d3ee;
   transform: translateY(-3px);
 }
 
@@ -270,6 +262,7 @@
 }
 
 /* Hide decorative arrow on language cards */
+
 .skills-language-arrow {
   display: none;
 }
@@ -333,7 +326,6 @@
 @media (prefers-reduced-motion: reduce) {
   .skills-technical-card,
   .skills-language-card,
-  .skills-tag,
   .skills-soft-item {
     transition: none;
   }

@@ -20,7 +20,7 @@
 .project-card-body strong{font-family:'Space Grotesk',sans-serif;font-size:24px;letter-spacing:-.035em;line-height:1.2}
 .project-description{font-size:14px;color:#aaaabd;line-height:1.65}
 .project-card-footer,.project-modal-tech{display:flex;gap:7px;flex-wrap:wrap}
-.project-tech{display:inline-flex;align-items:center;border:1px solid #35354a;background:#1d1d30;color:#c6c6d5;border-radius:5px;padding:6px 9px;font:11px 'IBM Plex Mono',monospace}
+.project-tech {display: inline-flex;align-items: center;border: 1px solid #3b344c;background: #221a30;color: #f5eaf1;border-radius: 5px;padding: 6px 9px;font: 11px "IBM Plex Mono", monospace;}
 .project-modal-overlay{position:fixed;inset:0;z-index:1000;background:#05050bdc;backdrop-filter:blur(9px);display:flex;align-items:center;justify-content:center;padding:24px}
 .project-modal{position:relative;width:min(100%,780px);max-height:min(90vh,900px);overflow-y:auto;background:#151525;border:1px solid #35354a;border-radius:20px;padding:clamp(26px,5vw,54px);box-shadow:0 30px 100px #0009}
 .project-modal-close{position:absolute;top:18px;right:21px;width:37px;height:37px;display:grid;place-items:center;border:1px solid #38384d;border-radius:50%;background:#202035;color:#fff;font-size:25px;cursor:pointer}
