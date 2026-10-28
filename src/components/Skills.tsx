@@ -31,7 +31,7 @@ const softSkills = [
   "Analytical Mindset",
   "Autonomy",
   "Resourcefulness",
-  "Attention to Detail",
+  "Detail-Oriented",
   "Fast Learner",
 ];
 
@@ -58,6 +58,7 @@ export default function Skills() {
             <h3 id="technical-skills-title">Technical Skills</h3>
             <span className="skills-block-rule" aria-hidden="true" />
           </div>
+
           <div className="skills-technical-grid">
             {technicalGroups.map((group) => (
               <article className="skills-technical-card" key={group.title}>
@@ -65,10 +66,16 @@ export default function Skills() {
                   <span className="skills-card-number">{group.number}</span>
                   <span className="skills-card-symbol" aria-hidden="true">↗</span>
                 </div>
+
                 <h4>{group.title}</h4>
                 <p>{group.description}</p>
+
                 <div className="skills-tags">
-                  {group.skills.map((skill) => <span className="skills-tag" key={skill}>{skill}</span>)}
+                  {group.skills.map((skill) => (
+                    <span className="skills-tag" key={skill}>
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </article>
             ))}
@@ -81,12 +88,14 @@ export default function Skills() {
             <h3 id="soft-skills-title">Soft Skills</h3>
             <span className="skills-block-rule" aria-hidden="true" />
           </div>
+
           <div className="skills-soft-panel">
             <p>The qualities that shape how I learn, think, and solve problems.</p>
+
             <div className="skills-soft-list">
-              {softSkills.map((skill, index) => (
+              {softSkills.map((skill) => (
                 <span className="skills-soft-item" key={skill}>
-                  <span className="skills-soft-star" aria-hidden="true">{index % 2 === 0 ? "✳" : "✦"}</span>
+                  <span className="skills-soft-star" aria-hidden="true">✦</span>
                   {skill}
                 </span>
               ))}
@@ -100,14 +109,17 @@ export default function Skills() {
             <h3 id="languages-title">Languages</h3>
             <span className="skills-block-rule" aria-hidden="true" />
           </div>
+
           <div className="skills-languages-grid">
             {languages.map((language) => (
               <div className="skills-language-card" key={language.code}>
                 <span className="skills-language-code">{language.code}</span>
+
                 <div className="skills-language-detail">
                   <span className="skills-language-name">{language.name}</span>
                   <span className="skills-language-level">{language.level}</span>
                 </div>
+
                 <span className="skills-language-arrow" aria-hidden="true">↗</span>
               </div>
             ))}

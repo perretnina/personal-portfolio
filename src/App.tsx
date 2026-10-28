@@ -251,7 +251,7 @@ function App() {
                     scrollToSection("projects");
                   }}
                 >
-                  Explore My Work
+                  Projects
                   <span aria-hidden="true">↗</span>
                 </a>
 
