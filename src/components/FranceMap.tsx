@@ -21,7 +21,7 @@ type FranceMapProps = {
   onSelectStep: (step: number) => void;
 };
 
-const GEOJSON_URL = "/france.geojson";
+const GEOJSON_URL = `${import.meta.env.BASE_URL}france.geojson`;
 const WIDTH = 520;
 const HEIGHT = 460;
 
