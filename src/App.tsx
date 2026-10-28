@@ -257,7 +257,7 @@ function App() {
 
                 <a
                   className="button button-secondary"
-                  href="/cv.pdf"
+                  href={`${import.meta.env.BASE_URL}cv.pdf`}
                   download="Nina_Perret_CV.pdf"
                 >
                   Download CV
