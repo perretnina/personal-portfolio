@@ -10,11 +10,7 @@ export default function Contact() {
       >
         <div className="contact-container">
           <div className="contact-avatar-wrapper">
-            <img
-              src="/avatar.png"
-              alt="Illustrated portrait of Nina Perret"
-              className="contact-avatar"
-            />
+            <img src={`${import.meta.env.BASE_URL}avatar.png`} alt="Nina" className="contact-avatar"/>
           </div>
 
           <h2 id="contact-title">
