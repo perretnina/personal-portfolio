@@ -13,13 +13,29 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "ETFolio", category: "Data & AI",
-    description: "A personal project combining my interest in investing with data engineering, financial analysis, and investment strategy backtesting.",
-    technologies: ["Data Engineering", "Data Analysis", "Financial Markets", "Backtesting", "Python"],
+    title: "ETFolio",
+    category: "Data & AI",
+    description: "A personal project combining two of my interests: artificial intelligence and making my money work for me.",
+    technologies: ["Data Engineering", "Machine Learning", "Data Analysis", "Financial Markets", "Backtesting", "Python"],
     sections: [
-      { heading: "The Challenge", paragraphs: ["I wanted to combine my interest in investing with data analysis to better understand an ETF's historical performance and explore different investment strategies, without treating financial indicators as reliable predictions."] },
-      { heading: "What I Built", paragraphs: ["I built a Python ETL pipeline to collect, clean, and combine historical ETF data from different exchanges.", "I developed a Streamlit dashboard with interactive Plotly charts and technical indicators, including moving averages, RSI, MACD, and Bollinger Bands.", "I also designed a backtesting module to compare investment strategies, with machine learning as a potential future extension."] },
-    ],
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "Financial markets are complex and influenced by countless factors, making stock prices inherently unpredictable. Rather than trying to forecast exact prices, I wanted to explore how AI could help me better understand market trends.",
+          "My goal is to combine technical indicators, machine learning, and financial news to get a clearer picture of market conditions and make my own informed investment decisions."
+        ]
+      },
+      {
+        heading: "What I Built",
+        paragraphs: [
+          "I built an automated Python ETL pipeline to collect, clean, and merge historical data for the iShares EURO STOXX Banks 30-15 UCITS ETF from multiple exchanges.",
+          "I developed an interactive Streamlit dashboard to visualize price trends and technical indicators, including moving averages, RSI, MACD, and Bollinger Bands.",
+          "I'm working on supervised ML models to combine these indicators, identify potential market trends, and generate BUY / WAIT / SELL signals with confidence scores.",
+          "I also plan to integrate AI-generated summaries of financial news relevant to the ETF's European banking sector. The idea is to complement technical analysis with real-world context, leaving the final investment decision to me.",
+          "Finally, I'm developing a backtesting framework to compare ML-driven strategies with traditional approaches like Dollar-Cost Averaging (DCA) and evaluate whether AI actually adds value."
+        ]
+      }
+    ]
   },
   {
     title: "Junior-Entreprise Web App", category: "Software Engineering",
